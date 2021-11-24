@@ -1,0 +1,229 @@
+{
+  "id": "a695a784-0c4e-4dbd-ab91-613d593e5a86",
+  "version": "2.0",
+  "name": "npi-email-or-text-court-dates-to-clients",
+  "url": "https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_cpty.cp_personcase_setup_idx",
+  "tests": [{
+    "id": "8e7f9634-b35a-44f9-b012-1960ef2bbeda",
+    "name": "Scrape Data",
+    "commands": [{
+      "id": "4f649498-a6e8-41ab-9509-47582da638f6",
+      "comment": "",
+      "command": "open",
+      "target": "https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_cpty.cp_personcase_setup_idx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "005163c5-ea9b-4850-a587-15d483cbc966",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=1",
+      "targets": [
+        ["index=1"]
+      ],
+      "value": ""
+    }, {
+      "id": "b70f8936-b434-4e21-bbff-7746a779922a",
+      "comment": "",
+      "command": "click",
+      "target": "name=partial_ind",
+      "targets": [
+        ["name=partial_ind", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='partial_ind']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49d7a4ac-2869-42c6-a459-f3227df634f0",
+      "comment": "",
+      "command": "click",
+      "target": "name=last_name",
+      "targets": [
+        ["name=last_name", "name"],
+        ["css=tr:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='last_name']", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfc0c26c-4ae8-48b8-8497-7a66cc209744",
+      "comment": "",
+      "command": "type",
+      "target": "name=last_name",
+      "targets": [
+        ["name=last_name", "name"],
+        ["css=tr:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='last_name']", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "A"
+    }, {
+      "id": "5793521f-7abf-4fdc-9ace-2f383295246a",
+      "comment": "",
+      "command": "click",
+      "target": "name=begin_date",
+      "targets": [
+        ["name=begin_date", "name"],
+        ["css=tr:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='begin_date']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "231cd01d-822e-457d-95ef-459a802f4872",
+      "comment": "",
+      "command": "type",
+      "target": "name=begin_date",
+      "targets": [
+        ["name=begin_date", "name"],
+        ["css=tr:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='begin_date']", "xpath:attributes"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "01-NOV-2021"
+    }, {
+      "id": "18dc4bba-73fd-4048-a260-27c0133523ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(7) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(7) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[7]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Ending Case Filing Date:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b5df3c2-9822-4f86-a48a-a4f9e7908a56",
+      "comment": "",
+      "command": "click",
+      "target": "name=end_date",
+      "targets": [
+        ["name=end_date", "name"],
+        ["css=tr:nth-child(7) input", "css:finder"],
+        ["xpath=//input[@name='end_date']", "xpath:attributes"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a80525c0-6c4d-41ee-9dd9-cffc8f0ad7e0",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_date",
+      "targets": [
+        ["name=end_date", "name"],
+        ["css=tr:nth-child(7) input", "css:finder"],
+        ["xpath=//input[@name='end_date']", "xpath:attributes"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": "14-NOV-2021"
+    }, {
+      "id": "353e531d-a32e-4bb4-bfb2-9a7f6aa85b23",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='ck_public_qry_cpty.cp_personcase_details_idx']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d65e6333-4bfb-430b-895b-d53908289149",
+      "comment": "",
+      "command": "click",
+      "target": "name=case_type",
+      "targets": [
+        ["name=case_type", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='case_type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'ALL\n01 - CIVIL WARRANT - LOCAL\n02 - REPLEVIN - LOCAL\n03 - ORIGINAL ATTACHMENT - LOCAL\n04 - CIVIL WARRANT - SEC OF STATE\n05 - CIVIL WARRANT-SH OF ANOTHER CO\n06 - FED - LOCAL\n07 - SCIRE FACIAS TO REVIVE - LOCAL\n08 - HLAN - NO LONGER USED\n09 - WRIT OF ATTACH W/SUMMONS-HLAN\n10 - WRIT/SUMMONS - HLAN\n11 - DISTRESS WARRANT - HLAN\n12 - CROSS ACTION - LOCAL\n13 - CROSS ACTION - OTHER\n14 - CIVIL WARRANT- OTHER\n15 - REPLEVIN - OTHER\n16 - FED - OTHER\n17 - CIVIL WARRANT/EXTRA TERRITORIA\n18 - INTERPLEADER - LOCAL\n19 - DRUG DEALER EVICTION PROGRAM\n20 - HANDGUN PETITION\n21 - PETITION - LOCAL\n22 - PETITION - OTHER\n23 - INJUNCTION - LOCAL\n24 - INJUNCTION - OTHER\n27 - IMMEDIATE WRIT- LOCAL\n28 - IMMEDIATE WRIT- OTHER\n29 - ORIGINAL ATTACHMENT- OTHER\n30 - SCIRE FACIAS TO REVIVE-OTHER\n31 - ATTACHMENT W/SUMMONS-LOCAL\n32 - ATTACHMENT W/SUMMONS-OTHER\n33 - DISTRESS WARRANT- LEVY\n34 - DISTRESS WARRANT-GARNISHMENT\n35 - INTERPLEADER-OTHER\n36 - CIVIL WARRANT- COMM OF INSURAN\n37 - COUNTER COMPLAINT LOCAL\n38 - COUNTER COMPLAINT OTHER\n39 - MUNICIPAL FLNG GARN- OTHER(34)\n40 - OTHER TN COUNTY TRANSFER\nMH - MENTAL HEALTH COMMITMENT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8cc6dc3-1578-450d-aa09-af2b5dd22ee8",
+      "comment": "",
+      "command": "select",
+      "target": "name=case_type",
+      "targets": [],
+      "value": "label=16 - FED - OTHER"
+    }, {
+      "id": "8088aa85-5454-481e-9bde-7bcbe68e99ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(17)",
+      "targets": [
+        ["css=option:nth-child(17)", "css:finder"],
+        ["xpath=//option[17]", "xpath:position"],
+        ["xpath=//option[contains(.,'16 - FED - OTHER')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4da7ef58-5cb6-475f-9066-99a2b1a7709c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Submit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cca1d1f9-76c5-4979-9f53-f2b5cb3b44e7",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'@1607547')]", "xpath:innerText"]
+      ],
+      "value": "ID"
+    }, {
+      "id": "05fc6ac2-5c73-4c78-853a-9ab34cece0c4",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(2) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(4)", "css:finder"],
+        ["xpath=//tr[2]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'DEFENDANT')]", "xpath:innerText"]
+      ],
+      "value": "PartyType"
+    }, {
+      "id": "6493d0f2-d53b-4ee4-91de-efa3398a2d66",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(2) > td:nth-child(5)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(5)", "css:finder"],
+        ["xpath=//tr[2]/td[5]", "xpath:position"],
+        ["xpath=//td[contains(.,'12-NOV-2021')]", "xpath:innerText"]
+      ],
+      "value": "FilingDate"
+    }, {
+      "id": "e9ec31b5-7f71-4a73-acfb-13691fe8274c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'@1605475')]", "xpath:innerText"]
+      ],
+      "value": "ID"
+    }]
+  }],
+  "suites": [{
+    "id": "1d52c192-beff-451b-9b5d-9eb94b98fcb9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8e7f9634-b35a-44f9-b012-1960ef2bbeda"]
+  }],
+  "urls": ["https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_cpty.cp_personcase_setup_idx"],
+  "plugins": []
+}
