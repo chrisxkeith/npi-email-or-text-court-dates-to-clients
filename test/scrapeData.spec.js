@@ -7,7 +7,7 @@ describe('Scrape Data', function() {
   let driver
   let vars
   beforeEach(async function() {
-    driver = await new Builder().forBrowser('firefox').build()
+    driver = await new Builder().forBrowser('chrome').build()
     vars = {}
   })
   afterEach(async function() {
@@ -27,6 +27,8 @@ describe('Scrape Data', function() {
     await driver.findElement(By.name("case_type")).click()
     await driver.findElement(By.css("option:nth-child(17)")).click()
     await driver.findElement(By.css("input:nth-child(4)")).click()
+// Goes to different URL: https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_cpty.cp_personcase_details_idx
+// Firefox fails here with "NoSuchWindowError: Browsing context has been discarded"
 //    vars["ID"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(1)")).getText()
 //    vars["PartyType"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(4)")).getText()
 //    vars["FilingDate"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(5)")).getText()
