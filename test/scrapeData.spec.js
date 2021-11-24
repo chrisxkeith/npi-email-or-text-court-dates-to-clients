@@ -8,7 +8,6 @@ describe('Scrape Data', function() {
   let vars
   beforeEach(async function() {
     driver = await new Builder().forBrowser('firefox').build()
-    driver.get("https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_cpty.cp_personcase_setup_idx")
     vars = {}
   })
   afterEach(async function() {
@@ -25,17 +24,12 @@ describe('Scrape Data', function() {
     await driver.findElement(By.css("tr:nth-child(7) > td:nth-child(1)")).click()
     await driver.findElement(By.name("end_date")).click()
     await driver.findElement(By.name("end_date")).sendKeys("14-NOV-2021")
-    await driver.findElement(By.css("form")).click()
     await driver.findElement(By.name("case_type")).click()
-    {
-      const dropdown = await driver.findElement(By.name("case_type"))
-      await dropdown.findElement(By.xpath("//option[. = '16 - FED - OTHER']")).click()
-    }
     await driver.findElement(By.css("option:nth-child(17)")).click()
     await driver.findElement(By.css("input:nth-child(4)")).click()
-    vars["ID"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(1)")).getText()
-    vars["PartyType"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(4)")).getText()
-    vars["FilingDate"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(5)")).getText()
-    vars["ID"] = await driver.findElement(By.css("tr:nth-child(3) > td:nth-child(1)")).getText()
+//    vars["ID"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(1)")).getText()
+//    vars["PartyType"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(4)")).getText()
+//    vars["FilingDate"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(5)")).getText()
+//    vars["ID"] = await driver.findElement(By.css("tr:nth-child(3) > td:nth-child(1)")).getText()
   })
 })
