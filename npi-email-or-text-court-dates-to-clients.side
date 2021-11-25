@@ -118,17 +118,6 @@
       ],
       "value": "14-NOV-2021"
     }, {
-      "id": "353e531d-a32e-4bb4-bfb2-9a7f6aa85b23",
-      "comment": "",
-      "command": "click",
-      "target": "css=form",
-      "targets": [
-        ["css=form", "css:finder"],
-        ["xpath=//form[@action='ck_public_qry_cpty.cp_personcase_details_idx']", "xpath:attributes"],
-        ["xpath=//form", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "d65e6333-4bfb-430b-895b-d53908289149",
       "comment": "",
       "command": "click",
@@ -148,17 +137,6 @@
       "target": "name=case_type",
       "targets": [],
       "value": "label=16 - FED - OTHER"
-    }, {
-      "id": "8088aa85-5454-481e-9bde-7bcbe68e99ee",
-      "comment": "",
-      "command": "click",
-      "target": "css=option:nth-child(17)",
-      "targets": [
-        ["css=option:nth-child(17)", "css:finder"],
-        ["xpath=//option[17]", "xpath:position"],
-        ["xpath=//option[contains(.,'16 - FED - OTHER')]", "xpath:innerText"]
-      ],
-      "value": ""
     }, {
       "id": "4da7ef58-5cb6-475f-9066-99a2b1a7709c",
       "comment": "",
