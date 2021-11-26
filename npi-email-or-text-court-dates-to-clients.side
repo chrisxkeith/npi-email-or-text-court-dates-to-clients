@@ -160,34 +160,6 @@
       ],
       "value": "ID"
     }, {
-      "id": "675b34ee-b1f8-4f87-917d-a3651e015e3c",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=2110949",
-      "targets": [
-        ["linkText=2110949", "linkText"],
-        ["css=tr:nth-child(2) a", "css:finder"],
-        ["xpath=//a[contains(text(),'2110949')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'ck_public_qry_doct.cp_dktrpt_frames?backto=P&case_id=2110949&begin_date=&end_date=')]", "xpath:href"],
-        ["xpath=//i/a", "xpath:position"],
-        ["xpath=//a[contains(.,'2110949')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "30407087-bfc6-450c-a05b-54c677a0f024",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=2109519",
-      "targets": [
-        ["linkText=2109519", "linkText"],
-        ["css=tr:nth-child(3) a", "css:finder"],
-        ["xpath=//a[contains(text(),'2109519')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'ck_public_qry_doct.cp_dktrpt_frames?backto=P&case_id=2109519&begin_date=&end_date=')]", "xpath:href"],
-        ["xpath=//tr[3]/td[3]/i/a", "xpath:position"],
-        ["xpath=//a[contains(.,'2109519')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "3db0c99f-64b6-44e6-8ce0-70caf8f623cf",
       "comment": "",
       "command": "click",
@@ -233,17 +205,6 @@
         ["xpath=//td[contains(.,'COURTHOUSE')]", "xpath:innerText"]
       ],
       "value": "location"
-    }, {
-      "id": "e9ec31b5-7f71-4a73-acfb-13691fe8274c",
-      "comment": "",
-      "command": "storeText",
-      "target": "css=tr:nth-child(3) > td:nth-child(1)",
-      "targets": [
-        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
-        ["xpath=//tr[3]/td", "xpath:position"],
-        ["xpath=//td[contains(.,'@1605475')]", "xpath:innerText"]
-      ],
-      "value": "ID"
     }]
   }],
   "suites": [{
