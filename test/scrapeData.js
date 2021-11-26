@@ -19,6 +19,10 @@ class Scraper {
     const by = By.linkText(caseNumber)
     const elem = driver.findElement(by)
     await elem.click()
+/*
+    let URL = 'https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_doct.cp_dktrpt_frames?backto=P&case_id=' + caseNumber + '&begin_date=&end_date='
+    await driver.get(URL)
+*/
     let courtDate = await driver.findElement(By.css("a:nth-child(5) td:nth-child(2)")).getText()
     let room = await driver.findElement(By.css("a:nth-child(5) td:nth-child(3)")).getText()
     let location = await driver.findElement(By.css("a:nth-child(5) td:nth-child(4)")).getText()
