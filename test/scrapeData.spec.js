@@ -31,12 +31,9 @@ describe('Scrape Data', function() {
     }
     await driver.findElement(By.css("input:nth-child(4)")).click()
     vars["ID"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(1)")).getText()
-    await driver.findElement(By.linkText("2110949")).click()
-    await driver.findElement(By.linkText("2109519")).click()
     await driver.findElement(By.linkText("2109558")).click()
     vars["courtDate"] = await driver.findElement(By.css("a:nth-child(5) td:nth-child(2)")).getText()
     vars["room"] = await driver.findElement(By.css("a:nth-child(5) td:nth-child(3)")).getText()
     vars["location"] = await driver.findElement(By.css("a:nth-child(5) td:nth-child(4)")).getText()
-    vars["ID"] = await driver.findElement(By.css("tr:nth-child(3) > td:nth-child(1)")).getText()
   })
 })
