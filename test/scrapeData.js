@@ -19,6 +19,7 @@ class Scraper {
     const by = By.linkText(caseNumber)
     const elem = driver.findElement(by)
     await elem.click()
+          // TODO : check for 'No case events were found.', return empty strings if so.
 /*
     let URL = 'https://gscivildata.shelbycountytn.gov/pls/gnweb/ck_public_qry_doct.cp_dktrpt_frames?backto=P&case_id=' + caseNumber + '&begin_date=&end_date='
     await driver.get(URL)
