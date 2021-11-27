@@ -2,6 +2,10 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 describe('Scrape Data', function() {
   this.timeout(30000)
   let driver
@@ -25,15 +29,18 @@ describe('Scrape Data', function() {
     await driver.findElement(By.name("end_date")).click()
     await driver.findElement(By.name("end_date")).sendKeys("14-NOV-2021")
     await driver.findElement(By.name("case_type")).click()
-    {
-      const dropdown = await driver.findElement(By.name("case_type"))
-      await dropdown.findElement(By.xpath("//option[. = '16 - FED - OTHER']")).click()
-    }
+
+    await driver.findElement(By.css("option:nth-child(17)")).click()
     await driver.findElement(By.css("input:nth-child(4)")).click()
-    vars["ID"] = await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(1)")).getText()
+    await sleep(3000)
+    await driver.switchTo().frame(1)
+    await sleep(3000)
     await driver.findElement(By.linkText("2109558")).click()
+    await sleep(3000)
+    await driver.switchTo().frame(1)
     vars["courtDate"] = await driver.findElement(By.css("a:nth-child(5) td:nth-child(2)")).getText()
     vars["room"] = await driver.findElement(By.css("a:nth-child(5) td:nth-child(3)")).getText()
     vars["location"] = await driver.findElement(By.css("a:nth-child(5) td:nth-child(4)")).getText()
+    console.log(JSON.stringify(vars))
   })
 })
